@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sharon Wu | Portfolio</title>
+    <meta name="description" content="Sharon Wu's personal portfolio for internships, clubs, research, and student leadership opportunities.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Sharon Wu home">SW</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+      </nav>
+      <button id="editToggle" class="quiet-button" type="button">Edit</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-text-key="heroEyebrow">Economics + Statistics student at Carnegie Mellon University</p>
+          <h1 data-text-key="heroName">Sharon Wu</h1>
+          <p class="intro" data-text-key="heroIntro">
+            I am interested in economic research, data analysis, market strategy, and technology
+            that turns messy information into useful decisions.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="mailto:sharonwxy0522@gmail.com">Contact Me</a>
+            <a id="resumeLink" class="secondary-link" href="./sharon-wu-resume.pdf" target="_blank" rel="noopener">Resume</a>
+            <label class="edit-only upload-button">
+              Upload Resume
+              <input id="resumeInput" type="file" accept="application/pdf,.pdf">
+            </label>
+          </div>
+        </div>
+        <aside class="profile-panel" aria-label="Profile summary">
+          <div class="portrait" data-text-key="portraitInitials" aria-label="Profile initials">SW</div>
+          <dl>
+            <div>
+              <dt data-text-key="profileSchoolLabel">School</dt>
+              <dd data-text-key="profileSchool">Carnegie Mellon University</dd>
+            </div>
+            <div>
+              <dt data-text-key="profileMajorLabel">Major</dt>
+              <dd data-text-key="profileMajor">Economics and Statistics</dd>
+            </div>
+            <div>
+              <dt data-text-key="profileGraduationLabel">Graduation</dt>
+              <dd data-text-key="profileGraduation">May 2029</dd>
+            </div>
+            <div>
+              <dt data-text-key="profileLocationLabel">Location</dt>
+              <dd data-text-key="profileLocation">Pittsburgh, PA</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" data-text-key="aboutKicker">About Me</p>
+            <h2 data-text-key="aboutHeading">Outside the resume.</h2>
+          </div>
+          <div class="edit-only about-actions">
+            <button id="editAboutButton" class="add-button" type="button">Edit About</button>
+            <label class="upload-button">
+              Add Picture
+              <input id="hobbyImageInput" type="file" accept="image/*">
+            </label>
+          </div>
+        </div>
+        <div class="about-layout">
+          <p id="aboutText" class="about-text"></p>
+          <div id="hobbyGallery" class="hobby-gallery" aria-label="Hobby photos"></div>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="section-kicker" data-text-key="educationKicker">Education</p>
+          <h2 data-text-key="educationHeading">Building a quantitative foundation.</h2>
+        </div>
+        <div class="timeline">
+          <article class="entry">
+            <div class="entry-top">
+              <h3 data-text-key="cmuTitle">Carnegie Mellon University</h3>
+              <span data-text-key="cmuDates">Aug 2025 - May 2029</span>
+            </div>
+            <p data-text-key="cmuSummary">B.S. in Economics and Statistics. Fall 2025 Dean's List.</p>
+            <p class="muted" data-text-key="cmuCoursework">Relevant coursework: microeconomics, macroeconomics, multivariate analysis, computing, concepts of mathematics, programming, and computer science.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-top">
+              <h3 data-text-key="isbTitle">International School of Beijing</h3>
+              <span data-text-key="isbDates">Aug 2021 - May 2025</span>
+            </div>
+            <p data-text-key="isbSummary">International Baccalaureate Diploma.</p>
+            <p class="muted" data-text-key="isbCoursework">Coursework included IB Economics HL, Mathematics HL, Chinese, English, Biology, and Psychology.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" data-text-key="experienceKicker">Experience</p>
+            <h2 data-text-key="experienceHeading">Work and applied learning.</h2>
+          </div>
+          <button class="edit-only add-button" type="button" data-add="experience">Add Experience</button>
+        </div>
+        <div id="experienceList" class="cards"></div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" data-text-key="projectsKicker">Projects</p>
+            <h2 data-text-key="projectsHeading">Research, strategy, and analysis.</h2>
+          </div>
+          <button class="edit-only add-button" type="button" data-add="projects">Add Project</button>
+        </div>
+        <div id="projectsList" class="cards"></div>
+      </section>
+
+      <section id="leadership" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" data-text-key="leadershipKicker">Leadership</p>
+            <h2 data-text-key="leadershipHeading">Community, clubs, and collaboration.</h2>
+          </div>
+          <button class="edit-only add-button" type="button" data-add="leadership">Add Leadership</button>
+        </div>
+        <div id="leadershipList" class="cards"></div>
+      </section>
+
+      <section id="skills" class="section skills-section">
+        <div>
+          <p class="section-kicker" data-text-key="skillsKicker">Skills</p>
+          <h2 data-text-key="skillsHeading">Tools and strengths.</h2>
+        </div>
+        <div id="skillsList" class="tag-cloud"></div>
+        <button class="edit-only add-button" type="button" data-add-skill>Add Skill</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-text-key="footerName">Sharon Wu</span>
+      <a href="mailto:sharonwxy0522@gmail.com">sharonwxy0522@gmail.com</a>
+    </footer>
+
+    <dialog id="editorDialog">
+      <form id="editorForm" method="dialog">
+        <div class="dialog-head">
+          <h2 id="dialogTitle">Edit item</h2>
+          <button class="icon-button" value="cancel" type="submit" aria-label="Close editor">×</button>
+        </div>
+        <label>
+          Title
+          <input id="itemTitle" name="title" required>
+        </label>
+        <label>
+          Organization or category
+          <input id="itemOrg" name="org">
+        </label>
+        <label>
+          Date or location
+          <input id="itemMeta" name="meta">
+        </label>
+        <label>
+          Details
+          <textarea id="itemDetails" name="details" rows="5"></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button id="deleteItem" class="danger-button" type="button">Delete</button>
+          <button class="quiet-button" value="cancel" type="submit">Cancel</button>
+          <button id="saveItem" class="primary-button" value="default" type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="aboutDialog">
+      <form id="aboutForm" method="dialog">
+        <div class="dialog-head">
+          <h2>Edit About Me</h2>
+          <button class="icon-button" value="cancel" type="submit" aria-label="Close editor">×</button>
+        </div>
+        <label>
+          About text
+          <textarea id="aboutInput" name="about" rows="6"></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button class="quiet-button" value="cancel" type="submit">Cancel</button>
+          <button class="primary-button" value="default" type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="hobbyDialog">
+      <form id="hobbyForm" method="dialog">
+        <div class="dialog-head">
+          <h2>Picture Caption</h2>
+          <button class="icon-button" value="cancel" type="submit" aria-label="Close editor">×</button>
+        </div>
+        <label>
+          Caption
+          <input id="hobbyCaptionInput" name="caption">
+        </label>
+        <div class="dialog-actions">
+          <button id="deleteHobby" class="danger-button" type="button">Delete</button>
+          <button class="quiet-button" value="cancel" type="submit">Cancel</button>
+          <button class="primary-button" value="default" type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="skillDialog">
+      <form id="skillForm" method="dialog">
+        <div class="dialog-head">
+          <h2>Skill</h2>
+          <button class="icon-button" value="cancel" type="submit" aria-label="Close editor">×</button>
+        </div>
+        <label>
+          Skill
+          <input id="skillInput" name="skill" required>
+        </label>
+        <div class="dialog-actions">
+          <button id="deleteSkill" class="danger-button" type="button">Delete</button>
+          <button class="quiet-button" value="cancel" type="submit">Cancel</button>
+          <button class="primary-button" value="default" type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
